@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import {browserHistory} from 'react-router';
 import Routes from './routes';
  import './index.css';
-
+ import 'bootstrap/dist/css/bootstrap.css';
+ import 'bootstrap/dist/css/bootstrap-theme.css';
+ 
 //  import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render( <Routes history={browserHistory} />, document.getElementById('root'));
+ReactDOM.render( <Routes history={browserHistory}/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
