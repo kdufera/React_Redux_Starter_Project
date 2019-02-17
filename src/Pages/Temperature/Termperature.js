@@ -65,7 +65,6 @@ class Temperature extends Component {
       handleChangeSelection = (selectedOption) => {
         this.setState({ selectedOption });
         this.setState({ isDisabled: false });
-        //  alert('A name was submitted: ' + selectedOption.value);
       }
 
       /**
@@ -123,55 +122,54 @@ class Temperature extends Component {
        * @param {*} rankine 
        */
       r2k(rankine) {
-          return  Math.round(((parseFloat(rankine)) * 5/9) * 100.0) /100.0;
+          return  Math.round(((parseFloat(rankine)) *  5/9) * 100.0) /100.0;
         }
-	
-    
+
+        
       handleSubmit(event) {
         switch(this.state.selectedOption.value) {
             case '1':
-            this.handleDisplay(tuc.k2c(this.state.TargetUnits));
-            break;
+               this.handleDisplay(tuc.k2c(this.state.TargetUnits));
+               break;
             case '2':
-            this.handleDisplay(tuc.k2f(this.state.TargetUnits));
-            break;
+                this.handleDisplay(tuc.k2f(this.state.TargetUnits));
+                break;
             case '3':
-            this.handleDisplay(this.k2r(this.state.TargetUnits)); 
-            break;
+                this.handleDisplay(this.k2r(this.state.TargetUnits)); 
+                break;
             case '4':
-            this.handleDisplay(tuc.c2k(this.state.TargetUnits));
-            break;
+                this.handleDisplay(tuc.c2k(this.state.TargetUnits));
+                break;
             case '5':
-            this.handleDisplay(tuc.c2f(this.state.TargetUnits));
-            break;
+                this.handleDisplay(tuc.c2f(this.state.TargetUnits));
+                break;
             case '6':
-            this.handleDisplay(this.c2r(this.state.TargetUnits));
-            break;
+               this.handleDisplay(this.c2r(this.state.TargetUnits));
+               break;
             case '7':
-            this.handleDisplay(tuc.f2k(this.state.TargetUnits));
-            break;
+                this.handleDisplay(tuc.f2k(this.state.TargetUnits));
+               break;
             case'8':
-            this.handleDisplay(this.f2r(this.state.TargetUnits)); // fail
-            break;
+                this.handleDisplay(this.f2r(this.state.TargetUnits)); // fail
+                break;
             case '9':
-            this.handleDisplay(tuc.f2c(this.state.TargetUnits));
-            break;
+               this.handleDisplay(tuc.f2c(this.state.TargetUnits));
+               break;
             case '10':
-            this.handleDisplay(this.r2k(this.state.TargetUnits));//pass
-            break;
+                this.handleDisplay(this.r2k(this.state.TargetUnits));//pass
+                break;
             case '11':
-             this.handleDisplay(this.r2f(this.state.TargetUnits)); // pass
-             break;
-             case '12':
-             this.handleDisplay(this.r2c(this.state.TargetUnits));//fail
-             break;
+                this.handleDisplay(this.r2f(this.state.TargetUnits)); // pass
+                break;
+            case '12':
+                 this.handleDisplay(this.r2c(this.state.TargetUnits));//fail
+                 break;
              default:
-             alert("Invalid");
+                alert("Invalid");
         }
       }
 
   render() {
-     
     return (
       <div id="container"  className="Temperature">
     <Form onSubmit={this.handleSubmit} >
