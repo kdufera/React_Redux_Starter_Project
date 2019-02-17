@@ -184,13 +184,13 @@ class Temperature extends Component {
          /> 
        <hr></hr>
         <Form.Group controlId="formBasicEmail">
-            <Form.Control type="number"  step="0.01" value={this.state.value} onChange={this.handleChangeTargetUnits} placeholder="Target Units" required />
+            <Form.Control type="number"  step="0.01" value={this.state.value} onChange={this.handleChangeTargetUnits} placeholder="Target Unit" required />
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
             <Form.Control type="number" step="0.01" value={this.state.value} onChange={this.handleChangeStudentResponse}  name="student_response" placeholder="Student Response" required/>
         </Form.Group>
         <hr></hr>
-        <Button  disabled={this.state.isDisabled} variant="success" type="submit"> Submit</Button>
+        <Button  id="button_validate"    disabled={this.state.isDisabled} variant="success" type="submit"> Validate </Button>
         </Form>;
       </div>
     );

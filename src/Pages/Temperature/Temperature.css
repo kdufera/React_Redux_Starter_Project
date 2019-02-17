@@ -7,7 +7,12 @@ form {
 #container {
     padding-top: 6%;
     text-align: center;
-
+}
+#button_validate {
+  padding-right: 45px;
+  padding-left: 45px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 
 select {
