@@ -125,6 +125,9 @@ class Temperature extends Component {
           return  Math.round(((parseFloat(rankine)) *  5/9) * 100.0) /100.0;
         }
 
+      /**
+       *  Handle submit button
+       */
         
       handleSubmit(event) {
         switch(this.state.selectedOption.value) {
@@ -150,19 +153,19 @@ class Temperature extends Component {
                 this.handleDisplay(tuc.f2k(this.state.TargetUnits));
                break;
             case'8':
-                this.handleDisplay(this.f2r(this.state.TargetUnits)); // fail
+                this.handleDisplay(this.f2r(this.state.TargetUnits)); 
                 break;
             case '9':
                this.handleDisplay(tuc.f2c(this.state.TargetUnits));
                break;
             case '10':
-                this.handleDisplay(this.r2k(this.state.TargetUnits));//pass
+                this.handleDisplay(this.r2k(this.state.TargetUnits));
                 break;
             case '11':
-                this.handleDisplay(this.r2f(this.state.TargetUnits)); // pass
+                this.handleDisplay(this.r2f(this.state.TargetUnits)); 
                 break;
             case '12':
-                 this.handleDisplay(this.r2c(this.state.TargetUnits));//fail
+                 this.handleDisplay(this.r2c(this.state.TargetUnits));
                  break;
              default:
                 alert("Invalid");
