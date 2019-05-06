@@ -35,7 +35,6 @@ class Temperature extends Component {
               {value: '11', label: 'Rankine To Fahrenheit'},
               {value: '12', label: 'Rankine To Celsius'},
             ]
-            
          };
 
         this.handleChangeTargetUnits = this.handleChangeTargetUnits.bind(this);
@@ -174,24 +173,28 @@ class Temperature extends Component {
 
   render() {
     return (
-      <div id="container"  className="Temperature">
-    <Form onSubmit={this.handleSubmit} >
-    <h4>Temperature Conversion Options </h4>
-       <Select   
-        value={this.state.selectedOption}
-        onChange={this.handleChangeSelection}
-        options={this.state.options}
+     <div id="container"  className="Temperature">
+     <Form onSubmit={this.handleSubmit} >
+     
+        <h4>Temperature Conversion Options </h4>
+         <Select   
+          value={this.state.selectedOption}
+          onChange={this.handleChangeSelection}
+          options={this.state.options}
          /> 
+
        <hr></hr>
         <Form.Group controlId="formBasicEmail">
             <Form.Control type="number"  step="0.01" value={this.state.value} onChange={this.handleChangeTargetUnits} placeholder="Target Unit" required />
         </Form.Group>
+
         <Form.Group controlId="formBasicPassword">
             <Form.Control type="number" step="0.01" value={this.state.value} onChange={this.handleChangeStudentResponse}  name="student_response" placeholder="Student Response" required/>
         </Form.Group>
+
         <hr></hr>
         <Button  id="button_validate"    disabled={this.state.isDisabled} variant="success" type="submit"> Validate </Button>
-        </Form>;
+      </Form>;
       </div>
     );
   }
